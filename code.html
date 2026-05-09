@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Shahan Ali (ProBoy) - Tech Enthusiast & Developer | Burewala, Pakistan</title>
+  <meta name="description" content="Shahan Ali, also known as ProBoy or Shahan315, is a tech enthusiast from Burewala, Pakistan specializing in web development, cybersecurity, and digital solutions. Learn more about his work and projects." />
+  <meta name="keywords" content="shahan315, shahan, shahanali, shahankhan, whoisshahan, whoshahan, proboy315, proboy, whoisproboy, lucifer, luciferkiller, luciferkiller315, whoisluciferkiller315, tech enthusiast, web developer, cybersecurity, Burewala, Pakistan" />
+  <meta name="author" content="Shahan Ali (ProBoy)" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://proboy.ct.ws/" />
+<meta name="google-site-verification" content="o1-175VlBTN2KgmzjwA4L8GqcXNcu15lqUylcovA79I" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/icon.ico" />
+  <link rel="apple-touch-icon" href="/assets/icon.ico" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://proboy.ct.ws/" />
+  <meta property="og:title" content="Shahan Ali (ProBoy) - Tech Enthusiast & Developer" />
+  <meta property="og:description" content="Shahan Ali from Burewala, Pakistan – passionate about creating apps, websites, and digital solutions. Explore his skills and projects." />
+  <meta property="og:image" content="https://proboy.vercel.app/botimg.png" /> <!-- Use a representative image -->
+  <meta property="og:image:alt" content="Shahan Ali - ProBoy" />
+  <meta property="profile:first_name" content="Shahan" />
+  <meta property="profile:last_name" content="Ali" />
+  <meta property="profile:username" content="ProBoy315" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shahan Ali (ProBoy) - Tech Enthusiast & Developer" />
+  <meta name="twitter:description" content="Shahan Ali from Burewala, Pakistan – passionate about creating apps, websites, and digital solutions. Explore his skills and projects." />
+  <meta name="twitter:image" content="https://proboy.vercel.app/botimg.png" />
+  
+  <!-- Existing links and styles -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Your existing styles (unchanged) -->
+  <style>
+    :root {
+      --primary: linear-gradient(135deg, #00d4ff, #7e00ff);
+      --bg: #000000;
+      --glass: rgba(255, 255, 255, 0.05);
+      --text: #ffffff;
+      --muted: #aaaaaa;
+      --highlight: #00ffff;
+      --radius: 16px;
+      --blur: 12px;
+      --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --glow: 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: var(--text);
+      position: relative;
+      overflow-x: hidden;
+      background-color: var(--bg);
+    }
+
+    /* Background with blur effect */
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -3;
+      filter: blur(8px) brightness(0.6);
+      transform: scale(1.1);
+    }
+
+    /* Header with logo */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--glass);
+      backdrop-filter: blur(var(--blur));
+      z-index: 100;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(0, 212, 255, 0.3);
+      box-shadow: var(--glow);
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+    }
+
+    /* Battery indicator */
+    .battery-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .battery-wrapper {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 50px;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .battery-icon {
+      color: var(--highlight);
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+
+    /* Main Section */
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 100px 20px 40px;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 768px) {
+      .main-section {
+        flex-direction: row;
+        gap: 60px;
+      }
+    }
+
+    /* Profile Card */
+    .profile-card {
+      background: var(--glass);
+      backdrop-filter: blur(var(--blur));
+      border-radius: var(--radius);
+      padding: 2rem;
+      max-width: 600px;
+      margin: 20px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), var(--glow);
+    }
+
+    .profile-name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+    }
+
+    .profile-title {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .profile-bio {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .contact-item i {
+      color: var(--highlight);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-link {
+      color: var(--text);
+      font-size: 1.4rem;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      color: var(--highlight);
+      transform: translateY(-3px);
+      text-shadow: var(--glow);
+    }
+
+    /* Links styling */
+    a {
+      color: var(--highlight);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    a:hover {
+      text-shadow: var(--glow);
+      color: #00d4ff;
+    }
+
+    .profile-img {
+      width: 280px;
+      height: 280px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+    }
+
+    @media (min-width: 768px) {
+      .profile-img {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    /* Sections */
+    .section {
+      padding: 50px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      text-align: center;
+      background: var(--primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: var(--glow);
+    }
+
+    /* About Section */
+    .qa-item {
+      background: var(--glass);
+      backdrop-filter: blur(var(--blur));
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .qa-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), var(--glow);
+    }
+
+    .question {
+      font-weight: 600;
+      color: var(--highlight);
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(28, 27, 41, 0.7));
+      backdrop-filter: blur(5px);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+      }
+      
+      .section {
+        padding: 60px 20px;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+      
+      .qa-item {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .question {
+        font-size: 1.1rem;
+      }
+    }
+
+    .skill-card {
+      background: var(--glass);
+      backdrop-filter: blur(5px);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), var(--glow);
+    }
+
+    .skill-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 18px;
+      background: rgba(18, 18, 30, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Nav Button */
+    .nav-btn {
+      padding: 8px 16px;
+      background: rgba(123, 104, 238, 0.2);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      white-space: nowrap;
+      font-size: 0.85rem;
+    }
+
+    .nav-btn:hover {
+      background: rgba(123, 104, 238, 0.3);
+      border-color: var(--highlight);
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .header {
+        padding: 0.8rem 1rem;
+      }
+      
+      .logo-text {
+        font-size: 1.2rem;
+      }
+      
+      body {
+        padding: 70px 15px 100px;
+      }
+      
+      .battery-wrapper {
+        padding: 0.3rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Blurred Background Image (improved alt) -->
+  <img src="https://proboy.vercel.app/all-bg.jpeg" alt="Shahan Ali background - ProBoy tech enthusiast" class="background-image">
+
+  <!-- Header with Logo -->
+  <header class="header">
+    <div class="logo-container">
+      <!-- Added alt attribute for logo -->
+      <img src="/assets/icon.ico" alt="ProBoy Logo" class="logo-img">
+      <div class="logo-text">ProBoy</div>
+    </div>
+    
+    <!-- Battery Indicator and Explore Button -->
+    <div class="battery-container">
+      <a href="/home" class="nav-btn">TooLs</a>
+      <div class="battery-wrapper">
+        <i class="fas fa-battery-full battery-icon" id="battery-icon"></i>
+        <span id="battery-level">--%</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <section class="main-section">
+    <!-- Profile Image with alt -->
+    <img src="/assets/9675d829-923c-4e09-b87a-a42c23861493%20(1).svg" alt="Shahan Ali - ProBoy profile illustration" class="profile-img">
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <h1 class="profile-name">Shahan Ali</h1>
+      <p class="profile-title">Tech Enthusiast | Explorer | Honest Person</p>
+      <p class="profile-bio">I'm Shahan Ali from Burewala, Pakistan—a tech enthusiast passionate about creating apps, websites, and digital solutions. I believe in honesty, faith in Allah, and living a simple, peaceful life.</p>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span><a href="wa.me/923261684315">+92 326 1684315</a></span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span><a href="mailto:luciferkiller315@gmail.com">luciferkiller315@gmail.com</a></span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span><a href="https://maps.app.goo.gl/vPiWfSYFZXvaJpLx9">Burewala, Pakistan</a> | IP: <a href="https://whatismyipaddress.com/ip/59.103.100.77">59.103.100.77</a></span>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://tiktok.com/@itx_proboy" target="_blank" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/itx___proboy" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/ProBoy315" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="wa.me/923261684315" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100093176537267" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://t.me/itx_proboy" target="_blank" class="social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Q&A -->
+  <section class="section">
+    <h2 class="section-title">About Me</h2>
+    <div>
+      <div class="qa-item">
+        <p class="question">Q1: Who are you?</p>
+        <p>A: I am Shahan Ali from Pakistan. I love exploring and creating digital things like apps, graphics, websites, etc.</p>
+      </div>
+      <div class="qa-item">
+        <p class="question">Q2: What do you love doing?</p>
+        <p>A: I love researching different topics, especially tech and coding. Most of my time is spent on GitHub searching for new ideas and building more attractive and advanced projects.</p>
+      </div>
+      <div class="qa-item">
+        <p class="question">Q3: What is your biggest strength?</p>
+        <p>A: My biggest strength is honesty and my belief in Allah, knowing that He will handle everything.</p>
+      </div>
+      <div class="qa-item">
+        <p class="question">Q4: What are you currently working on?</p>
+        <p>A: I am currently working on Shopify stores, Facebook accounts, TikTok and YouTube monetization, website ad displays, and website marketing for ad views, clicks, and impressions.</p>
+      </div>
+      <div class="qa-item">
+        <p class="question">Q5: What is your future goal?</p>
+        <p>A: I have no big future goal. I just want a simple life and only what is required to survive. I don't need anything more than that.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-html5" style="color: #E44D26;"></i></div>
+        <div class="skill-name">HTML</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-js" style="color: #F7DF1E;"></i></div>
+        <div class="skill-name">JavaScript</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-python" style="color: #3776AB;"></i></div>
+        <div class="skill-name">Python</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-robot" style="color: #00F5FF;"></i></div>
+        <div class="skill-name">AI & Bots</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-lock" style="color: #FF6B6B;"></i></div>
+        <div class="skill-name">Cybersecurity</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-store" style="color: #7AC57A;"></i></div>
+        <div class="skill-name">Shopify Development</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-php" style="color: #777BB3;"></i></div>
+        <div class="skill-name">PHP & MySQL</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-mobile-alt" style="color: #4D8BF0;"></i></div>
+        <div class="skill-name">Responsive Web Design</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-github" style="color: #ffffff;"></i></div>
+        <div class="skill-name">Git & GitHub</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-video" style="color: #FF0000;"></i></div>
+        <div class="skill-name">Video Editing (CapCut)</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-youtube" style="color: #FF0000;"></i></div>
+        <div class="skill-name">YouTube SEO</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-ad" style="color: #6A5ACD;"></i></div>
+        <div class="skill-name">Ad Marketing</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-code" style="color: #ffffff;"></i></div>
+        <div class="skill-name">API Integrations</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-server" style="color: #333333;"></i></div>
+        <div class="skill-name">Backend Systems</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>мα∂є ву ProBoy © <span id="year"></span> | All rights reserved</p>
+  </footer>
+
+  <!-- Structured Data (JSON-LD) for Person / ProfilePage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shahan Ali",
+    "alternateName": ["ProBoy", "LuciferKiller315", "itx_proboy"],
+    "description": "Tech enthusiast from Burewala, Pakistan specializing in web development, cybersecurity, and digital solutions.",
+    "url": "https://proboy.ct.ws/",
+    "image": "https://proboy.vercel.app/all-bg.jpeg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Burewala",
+      "addressCountry": "PK"
+    },
+    "sameAs": [
+      "https://tiktok.com/@itx_proboy",
+      "https://instagram.com/itx___proboy",
+      "https://github.com/ProBoy315",
+      "https://wa.me/923261684315",
+      "https://www.facebook.com/profile.php?id=100093176537267",
+      "https://t.me/itx_proboy"
+    ],
+    "email": "luciferkiller315@gmail.com",
+    "telephone": "+923261684315"
+  }
+  </script>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+    ScrollReveal().reveal('section', { interval: 200, origin: 'bottom', distance: '50px' });
+
+    // Battery status indicator
+    async function updateBattery() {
+      if (navigator.getBattery) {
+        try {
+          const battery = await navigator.getBattery();
+          
+          const updateBatteryUI = () => {
+            const batteryPercent = Math.round(battery.level * 100);
+            document.getElementById('battery-level').textContent = `${batteryPercent}%`;
+            
+            // Update battery icon based on level
+            let iconClass = 'fa-battery-empty';
+            if (batteryPercent > 80) iconClass = 'fa-battery-full';
+            else if (batteryPercent > 60) iconClass = 'fa-battery-three-quarters';
+            else if (batteryPercent > 40) iconClass = 'fa-battery-half';
+            else if (batteryPercent > 20) iconClass = 'fa-battery-quarter';
+            
+            // Add charging bolt if charging
+            const batteryIcon = document.getElementById('battery-icon');
+            if (battery.charging) {
+              batteryIcon.className = `fas fa-bolt ${iconClass}`;
+              batteryIcon.style.color = '#00ff00';
+            } else {
+              batteryIcon.className = `fas ${iconClass}`;
+              batteryIcon.style.color = 'var(--highlight)';
+            }
+          };
+          
+          battery.addEventListener('levelchange', updateBatteryUI);
+          battery.addEventListener('chargingchange', updateBatteryUI);
+          updateBatteryUI();
+        } catch (error) {
+          console.error('Battery API error:', error);
+        }
+      } else {
+        document.getElementById('battery-level').textContent = "N/A";
+      }
+    }
+
+    // Initialize
+    window.addEventListener('load', () => {
+      updateBattery();
+      
+      // Smooth page load
+      document.body.style.opacity = '0';
+      setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+  </script>
+</body>
+</html>
